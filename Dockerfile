@@ -4,9 +4,9 @@ RUN apt-get update && \
             git \
             nodejs \
             npm
-WORKDIR /app
 RUN git clone \
     https://github.com/fourcolorssuffice/cpe2.git
+WORKDIR /cpe2
 RUN npm install
 EXPOSE 8000
 CMD ["npm", "start"]
